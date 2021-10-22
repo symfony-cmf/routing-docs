@@ -7,7 +7,7 @@ The CMF Routing provides two routers for Symfony:
 
 .. toctree::
 
-    quick_tour/index.rst
-    routing-bundle/index.rst
-    routing-component/index.rst
+    quick_tour/index
+    routing-bundle/index
+    routing-component/index
     contributing/index
