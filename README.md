@@ -2,7 +2,7 @@
 
 This is the documentation of the Symfony CMF Routing system and is licensed under the Creative Commons [Attribution-Share Alike 3.0 Unported License](http://creativecommons.org/licenses/by-sa/3.0/).
 
-This documentation is rendered online at https://symfony.com/bundles/SymfonyCmfRoutingBundle/current/index.html
+This documentation is rendered online at https://symfony.com/bundles/CMFRoutingBundle/current/index.html 
 
 ## Contributing
 
