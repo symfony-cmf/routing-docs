@@ -193,18 +193,11 @@ a route.
 
 The generator method looks like this::
 
-    public function generate($name, $parameters = [], $referenceType = self::ABSOLUTE_PATH);
+    public function generate(string $name, array $parameters = [], int $referenceType = self::ABSOLUTE_PATH);
 
-In Symfony core, the ``$name`` has to be a string with the configured name
-of the route to generate. The CMF routing component adds generators that handle
-alternative semantics of ``$name``.
-
-.. versionadded:: 2.3
-
-    Since `symfony-cmf/routing: 2.3.0`, the route document should be passed in
-    the route parameters as `_route_object`, and the special route name
-    `cmf_routing_object` is to be used. When using older versions of routing,
-    you need to pass the route document as route name.
+In Symfony core, all routes are identified by name. The CMF routing also can generate URLs from
+route objects. As the ``$name`` must be a string, the special ``cmf_routing_object`` name must be used
+and the route instance is passed in the parameters with key ``_route_object``.
 
 The ``ProviderBasedGenerator`` extends Symfony's default
 :class:`Symfony\\Component\\Routing\\Generator\\UrlGenerator` (which, in turn,
@@ -212,11 +205,10 @@ implements :class:`Symfony\\Component\\Routing\\Generator\\UrlGeneratorInterface
 and asks the route provider to find a route based on the name and parameters. It
 then lets the core logic generate the URL from that ``Route``.
 
-The CMF component also includes the ``ContentAwareGenerator``, which extends
-the ``ProviderBasedGenerator``, that checks if ``_route_object`` parameter is an object
-implementing ``RouteReferrersReadInterface``. If it is, it gets the ``Route``
-from that object. Using the ``ContentAwareGenerator``, you can generate URLs
-for your content in three ways:
+The CMF component also includes the ``ContentAwareGenerator``, which extends the
+``ProviderBasedGenerator``, that checks if ``_route_object`` parameter is an object
+implementing ``RouteReferrersReadInterface``. If it is, it gets the ``Route`` from that object.
+Using the ``ContentAwareGenerator``, you can generate URLs for your content in three ways:
 
 * Either pass a ``Route`` object as the ``_route_object`` parameter
 * Or pass a ``RouteReferrersInterface`` object that is your content as the ``_route_object`` parameter
