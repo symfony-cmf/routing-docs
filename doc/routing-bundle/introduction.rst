@@ -65,7 +65,7 @@ will look like this
 
     .. code-block:: yaml
 
-        # app/config/services.yml
+        # app/config/services.yaml
         services:
             app.my_router:
                 class: AppBundle\Routing\MyRouter

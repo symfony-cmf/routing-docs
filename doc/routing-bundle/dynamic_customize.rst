@@ -52,7 +52,7 @@ is executed.
 
     .. code-block:: yaml
 
-        # app/config/services.yml
+        # app/config/services.yaml
         services:
             app.routing.simple_enhancer:
                 class: AppBundle\Routing\Enhancer\SimpleEnhancer
@@ -183,14 +183,14 @@ configuration as follows:
 
    .. code-block:: yaml
 
-       # app/config/config.yml
+       # app/config/packages/cmf_routing.yaml
        cmf_routing:
            dynamic:
                route_provider_service_id: app.route_provider
 
    .. code-block:: xml
 
-       <!-- app/config/config.xml -->
+       <!-- app/config/packages/cmf_routing.xml -->
        <?xml version="1.0" encoding="UTF-8" ?>
        <container xmlns="http://symfony.com/schema/dic/services">
            <config xmlns="http://cmf.symfony.com/schema/dic/routing">
@@ -200,7 +200,7 @@ configuration as follows:
 
    .. code-block:: php
 
-       // app/config/config.php
+       // app/config/packages/cmf_routing.php
        $container->loadFromExtension('cmf_routing', [
            'dynamic' => [
               'route_provider_service_id' => 'app.route_provider',
@@ -224,14 +224,14 @@ yourself and configure that service:
 
    .. code-block:: yaml
 
-       # app/config/config.yml
+       # app/config/packages/cmf_routing.yaml
        cmf_routing:
            dynamic:
                url_generator: app.my_url_generator
 
    .. code-block:: xml
 
-       <!-- app/config/config.xml -->
+       <!-- app/config/packages/cmf_routing.xml -->
        <?xml version="1.0" encoding="UTF-8" ?>
        <container xmlns="http://symfony.com/schema/dic/services">
            <config xmlns="http://cmf.symfony.com/schema/dic/routing">
@@ -241,7 +241,7 @@ yourself and configure that service:
 
    .. code-block:: php
 
-       // app/config/config.php
+       // app/config/packages/cmf_routing.php
        $container->loadFromExtension('cmf_routing', [
            'dynamic' => [
               'url_generator' => 'app.my_url_generator',

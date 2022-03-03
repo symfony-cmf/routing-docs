@@ -28,7 +28,7 @@ To add the ``DynamicRouter``, use the following configuration:
 
     .. code-block:: yaml
 
-        # app/config/config.yml
+        # app/config/packages/cmf_routing.yaml
         cmf_routing:
             chain:
                 routers_by_id:
@@ -37,7 +37,7 @@ To add the ``DynamicRouter``, use the following configuration:
 
     .. code-block:: xml
 
-        <!-- app/config/config.xml -->
+        <!-- app/config/packages/cmf_routing.xml -->
         <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services">
 
@@ -52,7 +52,7 @@ To add the ``DynamicRouter``, use the following configuration:
 
     .. code-block:: php
 
-        // app/config/config.php
+        // app/config/packages/cmf_routing.php
         $container->loadFromExtension('cmf_routing', [
             'chain' => [
                 'routers_by_id' => [
@@ -82,14 +82,14 @@ default router, because :ref:`no other routers were set <reference-config-routin
 
     .. code-block:: yaml
 
-        # app/config/config.yml
+        # app/config/packages/cmf_routing.yaml
         cmf_routing:
             chain:
                 replace_symfony_router: true
 
     .. code-block:: xml
 
-        <!-- app/config/config.xml -->
+        <!-- app/config/packages/cmf_routing.xml -->
         <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services">
 
@@ -103,7 +103,7 @@ default router, because :ref:`no other routers were set <reference-config-routin
 
     .. code-block:: php
 
-        // app/config/config.php
+        // app/config/packages/cmf_routing.php
         $container->loadFromExtension('cmf_routing', [
             'chain' => [
                 'replace_symfony_router' => true,
@@ -159,7 +159,7 @@ type:
 
     .. code-block:: yaml
 
-        # app/config/config.yml
+        # app/config/packages/cmf_routing.yaml
         cmf_routing:
             dynamic:
                 controllers_by_type:
@@ -167,7 +167,7 @@ type:
 
     .. code-block:: xml
 
-        <!-- app/config/config.xml -->
+        <!-- app/config/packages/cmf_routing.xml -->
         <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services">
 
@@ -181,7 +181,7 @@ type:
 
     .. code-block:: php
 
-        // app/config/config.php
+        // app/config/packages/cmf_routing.php
         $container->loadFromExtension('cmf_routing', [
             'dynamic' => [
                 'controllers_by_type' => [
@@ -209,7 +209,7 @@ choose this controller to handle the request.
 
     .. code-block:: yaml
 
-        # app/config/config.yml
+        # app/config/packages/cmf_routing.yaml
         cmf_routing:
             dynamic:
                 controllers_by_class:
@@ -217,7 +217,7 @@ choose this controller to handle the request.
 
     .. code-block:: xml
 
-        <!-- app/config/config.xml -->
+        <!-- app/config/packages/cmf_routing.xml -->
         <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services">
 
@@ -234,7 +234,7 @@ choose this controller to handle the request.
 
     .. code-block:: php
 
-        // app/config/config.php
+        // app/config/packages/cmf_routing.php
         use Symfony\Cmf\Bundle\ContentBundle\Document\StaticContent;
 
         $container->loadFromExtension('cmf_routing', [
@@ -266,7 +266,7 @@ setting is set as controller.
 
     .. code-block:: yaml
 
-        # app/config/config.yml
+        # app/config/packages/cmf_routing.yaml
         cmf_routing:
             dynamic:
                 templates_by_class:
@@ -274,7 +274,7 @@ setting is set as controller.
 
     .. code-block:: xml
 
-        <!-- app/config/config.xml -->
+        <!-- app/config/packages/cmf_routing.xml -->
         <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services">
             <config xmlns="http://cmf.symfony.com/schema/dic/routing">
@@ -290,7 +290,7 @@ setting is set as controller.
 
     .. code-block:: php
 
-        // app/config/config.php
+        // app/config/packages/cmf_routing.php
         use Symfony\Cmf\Bundle\ContentBundle\Document\StaticContent;
 
         $container->loadFromExtension('cmf_routing', [
@@ -323,7 +323,7 @@ to prevent huge route lists if you have a large database. Setting the limit to
 
     .. code-block:: yaml
 
-        # app/config/config.yml
+        # app/config/packages/cmf_routing.yaml
         cmf_routing:
             dynamic:
                 persistence:
@@ -337,7 +337,7 @@ to prevent huge route lists if you have a large database. Setting the limit to
 
     .. code-block:: xml
 
-        <!-- app/config/config.xml -->
+        <!-- app/config/packages/cmf_routing.xml -->
         <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services">
             <config xmlns="http://cmf.symfony.com/schema/dic/routing">
@@ -358,7 +358,7 @@ to prevent huge route lists if you have a large database. Setting the limit to
 
     .. code-block:: php
 
-        # app/config/config.php
+        // app/config/packages/cmf_routing.php
         $container->loadFromExtension('cmf_routing', [
             'dynamic' => [
                 'persistence' => [
@@ -463,7 +463,7 @@ priority.
 
     .. code-block:: yaml
 
-        # app/config/config.yml
+        # app/config/packages/cmf_routing.yaml
         cmf_routing:
             dynamic:
                 route_filters_by_id:
@@ -471,7 +471,7 @@ priority.
 
     .. code-block:: xml
 
-        <!-- app/config/config.xml -->
+        <!-- app/config/packages/cmf_routing.xml -->
         <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services">
 
@@ -485,7 +485,7 @@ priority.
 
     .. code-block:: php
 
-        // app/config/config.php
+        // app/config/packages/cmf_routing.php
         $container->loadFromExtension('cmf_routing', [
             'dynamic' => [
                 'route_filters_by_id' => [
