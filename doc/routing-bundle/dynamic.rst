@@ -36,7 +36,7 @@ routers.
 
     .. code-block:: yaml
 
-        # app/config/config.yml
+        # app/config/packages/cmf_routing.yaml
         cmf_routing:
             chain:
                 routers_by_id:
@@ -49,7 +49,7 @@ routers.
 
     .. code-block:: xml
 
-        <!-- app/config/config.xml -->
+        <!-- app/config/packages/cmf_routing.xml -->
         <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services">
             <config xmlns="http://cmf.symfony.com/schema/dic/routing">
@@ -67,7 +67,7 @@ routers.
 
     .. code-block:: php
 
-        // app/config/config.php
+        // app/config/packages/cmf_routing.php
         $container->loadFromExtension('cmf_routing', [
             'chain' => [
                 'routers_by_id' => [
@@ -637,7 +637,7 @@ documents. You need to configure the route enhancer for this interface:
 
     .. code-block:: yaml
 
-        # app/config/config.yml
+        # app/config/packages/cmf_routing.yaml
         cmf_routing:
             dynamic:
                 controllers_by_class:
@@ -645,7 +645,7 @@ documents. You need to configure the route enhancer for this interface:
 
     .. code-block:: xml
 
-        <!-- app/config/config.xml -->
+        <!-- app/config/packages/cmf_routing.xml -->
         <?xml version="1.0" encoding="UTF-8" ?>
         <container xmlns="http://symfony.com/schema/dic/services">
             <config xmlns="http://cmf.symfony.com/schema/dic/routing">
@@ -659,7 +659,7 @@ documents. You need to configure the route enhancer for this interface:
 
     .. code-block:: php
 
-        // app/config/config.php
+        // app/config/packages/cmf_routing.php
         use Symfony\Cmf\Bundle\Routing\RedirectRouteInterface;
 
         $container->loadFromExtension('cmf_routing', [
