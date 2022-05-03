@@ -237,10 +237,7 @@ Bundles MUST support `XML in the configuration class`_.
 Testing Component Integration
 -----------------------------
 
-All bundles MUST implement the CMF Testing component.
-
-The :doc:`testing component documentation <../components/testing>` includes
-instructions on how the component should be integrated.
+All bundles MUST implement the `CMF Testing component`_.
 
 .. _`README template on wiki`: https://github.com/symfony-cmf/symfony-cmf/wiki/README-Template
 .. _`CHANGELOG template on wiki`: https://github.com/symfony-cmf/symfony-cmf/wiki/Change-log-format
@@ -253,3 +250,4 @@ instructions on how the component should be integrated.
 .. _`CONTRIBUTING file from CoreBundle`: https://github.com/symfony-cmf/core-bundle/blob/master/CONTRIBUTING.md
 .. _`LICENSE template on wiki`: https://github.com/symfony-cmf/symfony-cmf/wiki/LICENSE-Template
 .. _`service naming conventions`: https://symfony.com/doc/current/contributing/code/standards.html#service-naming-conventions
+.. _`CMF Testing component`: https://github.com/symfony-cmf/Testing

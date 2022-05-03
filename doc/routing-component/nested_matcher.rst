@@ -33,7 +33,7 @@ do any elaborate matching operations yet - this will be done in the later steps.
 
 .. tip::
 
-    The :doc:`RoutingBundle <../../bundles/routing/introduction>` provides
+    The :doc:`RoutingBundle </routing-bundle/introduction>` provides
     implementations for everything needed to get this component running with
     Doctrine PHPCR-ODM as well as with the Doctrine ORM.
 

@@ -172,15 +172,14 @@ When dumping the nodes again, your new page should show up under ``/cms/content/
 
 .. seealso::
 
-    See ":doc:`../bundles/phpcr_odm/introduction`" if you want to know more about using
+    See `Doctrine PHPCR-ODM`_ if you want to know more about using
     PHPCR in a Symfony application.
 
 Final Thoughts
 --------------
 
 PHPCR is a powerful way to store your pages in a CMS. But, if you're not
-comfortable with it, you can always
-:doc:`switch to another storage layer <../cookbook/database/choosing_storage_layer>`.
+comfortable with it, you can always switch to another storage layer.
 
 When looking back at these 20 minutes, you should have learned how to work
 with a new storage layer and you have added 2 new pages. Do you see how easy

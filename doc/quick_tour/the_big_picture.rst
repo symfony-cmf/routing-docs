@@ -93,12 +93,12 @@ The Request Flow
 Now, the Sandbox is ready to use. Navigate to the homepage
 (``http://localhost:8000/``) to see the demo:
 
-.. image:: ../_images/quick_tour/big-picture-home.png
+.. image:: images/quick_tour/big-picture-home.png
 
 You see that we already have a complete website in our demo. Let's take a
 closer look at the request flow for a Symfony CMF application:
 
-.. image:: ../_images/quick_tour/request_flow.png
+.. image:: images/quick_tour/request_flow.png
 
 First of all, you see a typical Symfony request flow following the white
 blocks. It creates a ``Request`` object which will be passed to a router,

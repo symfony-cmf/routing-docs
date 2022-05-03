@@ -17,7 +17,7 @@ handle the request, to avoid hard coding controller names into your route
 documents.
 
 To fully understand the capabilities of the dynamic router, read also the
-:doc:`routing component documentation <../../components/routing/index>`.
+:doc:`routing component documentation </routing-component/index>`.
 
 Configuration
 -------------
@@ -28,7 +28,7 @@ routers.
 
 .. note::
 
-    When your project is also using the :doc:`CoreBundle <../core/introduction>`,
+    When your project is also using the :doc:`CoreBundle </bundles/core/introduction>`,
     it is enough to configure persistence on ``cmf_core`` and you do not need to
     repeat the configuration for the dynamic router.
 
@@ -100,7 +100,7 @@ defaults to avoid issues when generating the URL for the current request.
 
 Your controllers can (and should) declare the parameter ``$contentDocument`` in
 their ``Action`` methods if they are supposed to work with content referenced
-by the routes.  Note that the :doc:`../content/introduction` provides a default
+by the routes.  Note that the `ContentBundle`_ provides a default
 controller that renders the content with a specified template for when you do
 not need any logic.
 
@@ -177,8 +177,7 @@ precedence):
    the generic controller is chosen. **priority: 10**;
 #. The default controller is chosen. This controller can use a default template
    to render the content, which will likely further decide how to handle this
-   content. See also
-   :ref:`the content bundle documentation <bundles-content-introduction_default-template>`.
+   content. See also the `ContentBundle`_ documentation.
    **priority: -100**.
 
 See :ref:`the configuration reference <reference-config-routing-dynamic>` to
@@ -681,3 +680,4 @@ Read on in the chapter :doc:`customizing the dynamic router <dynamic_customize>`
 .. _`PHPCR-ODM`: http://www.doctrine-project.org/projects/phpcr-odm.html
 .. _`URL generating capabilities of Symfony`: https://symfony.com/doc/current/routing.html#generating-urls
 .. _`FOSJsRoutingBundle`: https://github.com/FriendsOfSymfony/FOSJsRoutingBundle
+.. _`ContentBundle`: https://github.com/symfony-cmf/content-bundle

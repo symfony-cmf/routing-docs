@@ -92,7 +92,7 @@ service name is ``cmf_routing.router``.
 
 You can also configure the tag name you want to use with the second argument to
 the compiler pass constructor. If you don't, the default tag is ``router``. If
-you are using the :doc:`Symfony CMF RoutingBundle <../../bundles/routing/introduction>`,
+you are using the :doc:`Symfony CMF RoutingBundle </routing-bundle/introduction>`,
 this tag is already active with the default name.
 
 Routers

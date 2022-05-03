@@ -13,7 +13,7 @@ Routing
 
     This chapter provides background information on the Symfony CMF routing
     implementation. If you simply want to use routing in the CMF, read the
-    :doc:`../../bundles/routing/introduction`. If you want to customize how
+    :doc:`/routing-bundle/introduction`. If you want to customize how
     the routing works, please read on in this chapter.
 
 Like the Symfony routing component, the CMF routing component does not require
@@ -69,9 +69,8 @@ Symfony integration
 
 As mentioned before, this component was designed to use independently of the
 Symfony framework.  However, if you wish to use it as part of your Symfony
-CMF project, an integration bundle is also available. Read more about the
-RoutingBundle in :doc:`../../bundles/routing/introduction` in the bundles
-documentation.
+CMF project, an integration bundle is also available.
+:doc:`Read more about the RoutingBundle </routing-bundle/introduction>`.
 
 Sections
 --------

@@ -7,7 +7,7 @@ RoutingBundle
 
     The `RoutingBundle`_ integrates dynamic routing into Symfony using the CMF
     Routing component . See the
-    :doc:`component documentation <../../components/routing/introduction>`
+    :doc:`component documentation </routing-component/introduction>`
     if you are interested in the implementation details of the services
     explained in this chapter.
 
@@ -99,9 +99,9 @@ For more information on Routing in the Symfony CMF, please refer to:
 * The :doc:`configuration reference <configuration>`;
 * The documentation of the :doc:`dynamic`;
 * :doc:`dynamic_customize`;
-* The :doc:`routing component documentation <../../components/routing/introduction>`
+* The :doc:`routing component documentation </routing-component/introduction>`
   for implementation details of the routers;
-* :doc:`Sonata Admin integration <../sonata_phpcr_admin_integration/routing>`;
+* `Symfony CMF Sonata Phpcr Admin Integration Bundle`_;
 * Symfony's `Routing`_ component documentation.
 
 .. _`with composer`: https://getcomposer.org
@@ -110,3 +110,4 @@ For more information on Routing in the Symfony CMF, please refer to:
 .. _`PHPCR-ODM`: http://www.doctrine-project.org/projects/phpcr-odm.html
 .. _`documentation for DependencyInjection tags`: https://symfony.com/doc/current/reference/dic_tags.html
 .. _`Routing`: https://symfony.com/doc/current/components/routing/introduction.html
+.. _`Symfony CMF Sonata Phpcr Admin Integration Bundle`: https://github.com/symfony-cmf/sonata-phpcr-admin-integration-bundle

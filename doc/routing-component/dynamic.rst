@@ -139,7 +139,7 @@ default service name is ``cmf_routing.dynamic_router``.
 You can also configure the tag name you want to use with the second argument to
 the compiler pass constructor. If you don't, the default tag is
 ``dynamic_router_route_enhancer``. If you are using the
-:doc:`Symfony CMF RoutingBundle <../../bundles/routing/introduction>`, this tag is
+:doc:`Symfony CMF RoutingBundle </routing-bundle/introduction>`, this tag is
 already active with the default name.
 
 Linking a Route with a Content
@@ -174,7 +174,7 @@ Router in the chain or to another ``Route`` object.
 Notice that the actual redirection logic is not handled by the bundle. You
 should implement your own logic to handle the redirection. For an example of
 implementing that redirection under the full Symfony stack, refer to
-:doc:`the RoutingBundle <../../bundles/routing/introduction>`.
+:doc:`the RoutingBundle </routing-bundle/introduction>`.
 
 .. _component-routing-generator:
 

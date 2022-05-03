@@ -9,7 +9,7 @@ URL generator classes are built to be further customizable.
 
 This chapter describes the most common customization. If you want to go
 further, you will need to read the
-:doc:`component documentation <../../components/routing/introduction>`
+:doc:`component documentation </routing-component/introduction>`
 and look into the source code.
 
 If the ``DynamicRouter`` does not fit your needs at all, you have the option

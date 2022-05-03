@@ -99,7 +99,7 @@ Now execute the ``doctrine:phpcr:fixtures:load`` command again.
 This creates a new node called ``/cms/routes/new-route``, which will display
 our ``quick_tour`` page when you go to ``/new-route``.
 
-.. image:: ../_images/quick_tour/the-router-new-page.png
+.. image:: images/quick_tour/the-router-new-page.png
 
 Chaining multiple Routers
 -------------------------

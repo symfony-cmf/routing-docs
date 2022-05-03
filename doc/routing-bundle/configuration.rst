@@ -133,9 +133,8 @@ This configuration specifies the controller that is used when the route
 enhancers define a template but no explicit controller. It accepts any valid
 Symfony controller reference.
 
-If the :doc:`CoreBundle <../core/introduction>` and
-:doc:`ContentBundle <../content/introduction>` are registered, this
-defaults to ``cmf_content.controller:indexAction``.
+If the :doc:`CoreBundle </bundles/core/introduction>` and
+`ContentBundle`_ are registered, this defaults to ``cmf_content.controller:indexAction``.
 
 ``default_controller``
 ......................
@@ -392,7 +391,7 @@ manager_name
 
 A set of paths where routes are located in the PHPCR tree.
 
-If the :doc:`CoreBundle <../core/introduction>` is registered, this will
+If the :doc:`CoreBundle </bundles/core/introduction>` is registered, this will
 default to ``%cmf_core.persistence.phpcr.basepath%/routes``.
 
 ``enable_initializer``
@@ -405,7 +404,7 @@ The bundle comes with an initializer that creates the necessary nodes for all
 repository or loading fixtures. Sometimes this is not what you want, as the
 created node is of type 'Generic' and you might want the document to be a route
 (for the homepage). Set this to false to disable the initializer when you
-create your nodes yourself in your own :ref:`initializer <phpcr-odm-repository-initializers>`.
+create your nodes yourself in your own PHPCR ODM repository initializer.
 
 ``orm``
 """""""
@@ -527,7 +526,7 @@ service.
 
 To enable multi-language, set the valid locales in this option.
 
-If the :doc:`CoreBundle <../core/introduction>` is registered, this will
+If the :doc:`CoreBundle </bundles/core/introduction>` is registered, this will
 default to the value of ``cmf_core.locales``.
 
 ``limit_candidates``
@@ -558,7 +557,7 @@ For example, when the ``locales`` are ``de`` and ``en`` and the request has the
 url ``de/my/path``, the route provider will not only look for ``de/my/path``,
 ``de/my`` and ``de`` but also for ``my/path`` and ``my``. This allows to use a
 single route for multiple languages. This is used for example by the
-:doc:`SimpleCms <../simple_cms/introduction>`.
+`SimpleCmsBundle`_.
 
 If you do not need this, disabling the option will gain some performance.
 
@@ -577,3 +576,6 @@ no locale in their static pattern get the ``auto_locale_pattern`` option set.
 
 This is ignored if there are no ``locales`` configured. It makes no sense to
 enable this option when ``match_implicit_locale`` is disabled.
+
+.. _`SimpleCmsBundle`: https://github.com/symfony-cmf/simple-cms-bundle
+.. _`ContentBundle`: https://github.com/symfony-cmf/content-bundle
