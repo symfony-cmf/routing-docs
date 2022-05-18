@@ -134,7 +134,7 @@ enhancers define a template but no explicit controller. It accepts any valid
 Symfony controller reference.
 
 If the :doc:`CoreBundle </bundles/core/introduction>` and
-`ContentBundle`_ are registered, this defaults to ``cmf_content.controller:indexAction``.
+`ContentBundle`_ (no longer maintained) are registered, this defaults to ``cmf_content.controller:indexAction``.
 
 ``default_controller``
 ......................
@@ -557,7 +557,7 @@ For example, when the ``locales`` are ``de`` and ``en`` and the request has the
 url ``de/my/path``, the route provider will not only look for ``de/my/path``,
 ``de/my`` and ``de`` but also for ``my/path`` and ``my``. This allows to use a
 single route for multiple languages. This is used for example by the
-`SimpleCmsBundle`_.
+`SimpleCmsBundle`_ (no longer maintained).
 
 If you do not need this, disabling the option will gain some performance.
 

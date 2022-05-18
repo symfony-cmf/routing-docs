@@ -100,7 +100,7 @@ defaults to avoid issues when generating the URL for the current request.
 
 Your controllers can (and should) declare the parameter ``$contentDocument`` in
 their ``Action`` methods if they are supposed to work with content referenced
-by the routes.  Note that the `ContentBundle`_ provides a default
+by the routes.  Note that the `ContentBundle`_ (no longer maintained) provides a default
 controller that renders the content with a specified template for when you do
 not need any logic.
 

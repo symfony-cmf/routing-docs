@@ -12,6 +12,8 @@ guidelines.
     See :doc:`commits` for the commit conventions used by the Symfony CMF
     team.
 
+    See doc:`bundles` for the additional conventions and rules how to name things.
+
 Resources / Links
 -----------------
 
