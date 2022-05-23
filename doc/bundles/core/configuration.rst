@@ -121,7 +121,7 @@ configuration is the following:
 ``enabled``
 """""""""""
 
-.. include:: ../_partials/persistence_phpcr_enabled.rst.inc
+.. include:: /_partials/persistence_phpcr_enabled.rst.inc
 
 This setting is propagated as default value to all installed CMF bundles that support
 this setting:

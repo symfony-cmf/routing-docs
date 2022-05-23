@@ -377,12 +377,12 @@ to prevent huge route lists if you have a large database. Setting the limit to
 enabled
 *******
 
-.. include:: ../_partials/persistence_phpcr_enabled.rst.inc
+.. include:: /_partials/persistence_phpcr_enabled.rst.inc
 
 manager_name
 ************
 
-.. include:: ../_partials/persistence_phpcr_manager_name.rst.inc
+.. include:: /_partials/persistence_phpcr_manager_name.rst.inc
 
 ``route_basepaths``
 *******************
