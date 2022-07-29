@@ -296,30 +296,10 @@ a variable pattern with ``{id}``. The content could be used to define an intro
 section that is the same for each id. If you don't need content, you can also
 omit setting a content document on the route document.
 
-.. _component-route-generator-and-locales:
-
-.. sidebar:: Locales
-
-    You can use the ``_locale`` default value in a Route to create one Route
-    per locale, all referencing the same multilingual content instance. The
-    ``ContentAwareGenerator`` respects the ``_locale`` when generating routes
-    from content instances. When resolving the route, the ``_locale`` gets
-    into the request and is picked up by the Symfony locale system.
-
-    Make sure you configure the valid locales in the configuration so that the
-    bundle can optimally handle locales. The
-    :ref:`configuration reference <reference-config-routing-locales>` lists
-    some options to tweak behavior and performance.
-
 .. note::
 
-    Under PHPCR-ODM, Routes should not be translatable documents, as one
-    Route document represents one single url, and serving several translations
-    under the same url is not recommended.
-
-    If you need translated URLs, make the ``locale`` part of the route name and
-    create one route per language for the same content. The route generator will
-    pick the correct route if available.
+    See :ref:`below <bundles-routing-locales>` for information about routes and
+    translation.
 
 .. _bundles-routing-entity:
 
@@ -338,7 +318,7 @@ the name indicates, loads ``Route`` entities from an ORM database.
 .. _bundles-routing-route-entity:
 
 The ORM Route entity
---------------------
+~~~~~~~~~~~~~~~~~~~~
 
 The example in this section applies if you use the ORM route provider
 (``Symfony\Cmf\Bundle\RoutingBundle\Doctrine\Orm\RouteProvider``). It uses the
@@ -480,6 +460,52 @@ in :doc:`configuration`.
 The ORM routes support more things, for example route parameters, requirements
 and defaults. This is explained in the
 :ref:`route document section <bundles-routing-document>`.
+
+
+.. _bundles-routing-locales:
+
+Locales and Route Objects
+-------------------------
+
+Neither PHPCR-ODM nor ORM routes should be translated documents themselves. A
+route represents one single url, and serving several translations under the
+same url is not recommended.
+
+Make sure you configure the valid locales in the configuration so that the
+bundle can optimally handle locales. The
+:ref:`configuration reference <reference-config-routing-locales>` lists
+some options to tweak behavior and performance.
+
+For multilingual websites, you have two options:
+* One route object per language with the ``_locale`` set as default;
+* A single route with the option ``add_locale_pattern``.
+
+One Route per Language
+~~~~~~~~~~~~~~~~~~~~~~
+
+With this approach, you store a separate route object for each language. Each
+of those routes points to the same translated content object. To get the
+language picked up into Symfony, set a default value ``_locale`` to the
+corresponding local.
+
+This will then be picked up by the Symfony translation system.
+
+The ``ContentAwareGenerator`` respects the ``_locale`` default when choosing
+which route to generate for a content.
+
+This approach has the upside that you can have completely translated URLs, which
+can be desired for better readability of the URLs and SEO purposes.
+
+Single Route with Locale Pattern
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you are happy with the same URL for each language and only want a different
+locale prefix, you can store a single route object created with the option
+``add_locale_pattern`` set to true.
+
+This flag makes the route provide prepend ``/{_locale}`` to its path, meaning it
+will match the first part of the path as locale. The locale will then be picked
+up by Symfony.
 
 .. _bundles-routing-dynamic-generator:
 

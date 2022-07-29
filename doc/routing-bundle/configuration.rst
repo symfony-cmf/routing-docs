@@ -508,8 +508,6 @@ content. The repository has to implement ``Symfony\Cmf\Component\Routing\Content
     repository that tries to use the content ID as PHPCR path. ORM doesn't have
     a content repository at the moment.
 
-.. _reference-config-routing-locales:
-
 ``url_generator``
 ~~~~~~~~~~~~~~~~~
 
@@ -518,6 +516,8 @@ content. The repository has to implement ``Symfony\Cmf\Component\Routing\Content
 Service id for the DynamicRouter to generate URLs from Route objects. Overwrite
 to a service implementing ``UrlGeneratorInterface`` if you need to customize that
 service.
+
+.. _reference-config-routing-locales:
 
 ``locales``
 ~~~~~~~~~~~
