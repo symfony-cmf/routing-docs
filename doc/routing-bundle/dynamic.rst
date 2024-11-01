@@ -239,8 +239,8 @@ All routes are located under a configured root path, for example
     $route->setParentDocument($dm->find(null, '/cms/routes'));
     $route->setName('projects');
 
-    // set explicit controller (both service and Bundle:Name:action syntax work)
-    $route->setDefault('_controller', 'app.controller:specialAction');
+    // set explicit controller
+    $route->setDefault('_controller', 'app.controller::specialAction');
 
 The above example should probably be done as a route configured in a Symfony
 configuration file, unless the end user is supposed to change the URL
@@ -666,7 +666,7 @@ documents. You need to configure the route enhancer for this interface:
         cmf_routing:
             dynamic:
                 controllers_by_class:
-                    Symfony\Cmf\Component\Routing\RedirectRouteInterface: cmf_routing.redirect_controller:redirectAction
+                    Symfony\Cmf\Component\Routing\RedirectRouteInterface: cmf_routing.redirect_controller::redirectAction
 
     .. code-block:: xml
 
@@ -676,7 +676,7 @@ documents. You need to configure the route enhancer for this interface:
             <config xmlns="http://cmf.symfony.com/schema/dic/routing">
                 <dynamic>
                     <controller-by-class class="Symfony\Cmf\Component\Routing\RedirectRouteInterface">
-                        cmf_routing.redirect_controller:redirectAction
+                        cmf_routing.redirect_controller::redirectAction
                     </controller-by-class>
                 </dynamic>
             </config>
@@ -690,7 +690,7 @@ documents. You need to configure the route enhancer for this interface:
         $container->loadFromExtension('cmf_routing', [
             'dynamic' => [
                 'controllers_by_class' => [
-                    RedirectRouteInterface::class => 'cmf_routing.redirect_controller:redirectAction',
+                    RedirectRouteInterface::class => 'cmf_routing.redirect_controller::redirectAction',
                 ],
             ],
         ]);

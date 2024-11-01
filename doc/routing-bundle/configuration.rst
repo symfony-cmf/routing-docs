@@ -134,7 +134,7 @@ enhancers define a template but no explicit controller. It accepts any valid
 Symfony controller reference.
 
 If the :doc:`CoreBundle </bundles/core/introduction>` and
-`ContentBundle`_ (no longer maintained) are registered, this defaults to ``cmf_content.controller:indexAction``.
+`ContentBundle`_ (no longer maintained) are registered, this defaults to ``cmf_content.controller::indexAction``.
 
 ``default_controller``
 ......................
@@ -212,7 +212,7 @@ choose this controller to handle the request.
         cmf_routing:
             dynamic:
                 controllers_by_class:
-                    Symfony\Cmf\Bundle\ContentBundle\Document\StaticContent: cmf_content.controller:indexAction
+                    Symfony\Cmf\Bundle\ContentBundle\Document\StaticContent: cmf_content.controller::indexAction
 
     .. code-block:: xml
 
@@ -224,7 +224,7 @@ choose this controller to handle the request.
                 <dynamic>
                     <controller-by-class
                         class="Symfony\Cmf\Bundle\ContentBundle\Document\StaticContent">
-                        cmf_content.controller:indexAction
+                        cmf_content.controller::indexAction
                     </controller-by-class>
                 </dynamic>
             </config>
@@ -239,7 +239,7 @@ choose this controller to handle the request.
         $container->loadFromExtension('cmf_routing', [
             'dynamic' => [
                 'controllers_by_class' => [
-                    StaticContent::class => 'cmf_content.controller:indexAction',
+                    StaticContent::class => 'cmf_content.controller::indexAction',
                 ),
             ),
         ));
